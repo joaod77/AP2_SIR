@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD de Estudantes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Gestão de Estudantes</h1>
+
+  <!-- Botões de Acesso aos HTMLs -->
+  <div class="navigation-buttons">
+    <button onclick="window.location.href='index.html'">Página Inicial</button>
+    <button onclick="window.location.href='about.html'">Sobre</button>
+    <button onclick="window.location.href='doc.html'">Documentação</button>
+  </div>
+
+  <!-- Lista de Estudantes -->
+  <h2>Lista de Estudantes</h2>
+  <ul id="studentList">
+    <!-- A lista de estudantes será preenchida aqui -->
+  </ul>
+
+  <!-- Formulário para Adicionar Estudante -->
+  <h2>Criar Novo Estudante</h2>
+  <form id="addStudentForm">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" required>
+
+    <label for="course">Curso:</label>
+    <input type="text" id="course" required>
+
+    <label for="year">Ano:</label>
+    <input type="number" id="year" required>
+
+    <button type="submit">Adicionar Estudante</button>
+  </form>
+
+  <!-- Formulário para Editar Estudante -->
+  <h2>Editar Estudante</h2>
+  <form id="editStudentForm" style="display:none;">
+    <label for="editName">Nome:</label>
+    <input type="text" id="editName" required>
+
+    <label for="editCourse">Curso:</label>
+    <input type="text" id="editCourse" required>
+
+    <label for="editYear">Ano:</label>
+    <input type="number" id="editYear" required>
+
+    <input type="hidden" id="editStudentId">
+    <button type="submit">Atualizar Estudante</button>
+  </form>
+
+  <!-- Pesquisa de Estudante por ID -->
+  <h2>Pesquisar Estudante por ID</h2>
+  <form id="getStudentByIdForm">
+    <label for="studentId">ID do Estudante:</label>
+    <input type="text" id="studentId" required>
+    <button type="button" onclick="getStudentById()">Pesquisar Estudante</button>
+  </form>
+
+  <!-- Área para exibir o estudante encontrado -->
+  <div id="studentInfo"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

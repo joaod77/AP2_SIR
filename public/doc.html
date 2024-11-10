@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentação - CRUD de Estudantes</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Documentação do Sistema de Gestão de Estudantes</h1>
+
+  <!-- Botões de Acesso aos HTMLs -->
+  <div class="navigation-buttons">
+    <button onclick="window.location.href='index.html'">Página Inicial</button>
+    <button onclick="window.location.href='about.html'">Sobre</button>
+    <button onclick="window.location.href='doc.html'">Documentação</button>
+  </div>
+
+  <div class="content">
+    <h2>Como usar o sistema</h2>
+    <p>Este sistema utiliza a tecnologia LowDB para persistir os dados localmente em um arquivo `db.json`. As operações CRUD permitem que você adicione, edite, visualize e exclua informações dos estudantes.</p>
+
+    <h3>Endpoints da API:</h3>
+    <ul>
+      <li><strong>GET /students</strong> - Retorna todos os estudantes cadastrados.</li>
+      <li><strong>GET /students/:id</strong> - Retorna um estudante específico por ID.</li>
+      <li><strong>POST /students</strong> - Cria um novo estudante.</li>
+      <li><strong>PUT /students/:id</strong> - Atualiza um estudante específico por ID.</li>
+      <li><strong>DELETE /students/:id</strong> - Deleta um estudante específico por ID.</li>
+    </ul>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
